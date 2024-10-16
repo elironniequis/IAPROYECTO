@@ -1,0 +1,273 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F3BD;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor {
+    background-color: #02C39A;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #17424d;
+    font-size: 2.5em;
+    text-shadow: 2px 2px #F0F3BD;
+}
+
+button.opcion {
+    transition: transform 0.2s ease;
+    font-size: 1.2em;
+}
+
+button.opcion:hover {
+    transform: scale(1.1);
+    background-color: #05668D;
+}
+
+#barra {
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    background-color: #4CAF50;
+}
+
+#mensaje {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    background-color: #02C39A;
+}
+
+button.btn-primary {
+    background-color: #028090;
+    border-color: #028090;
+}
+
+button.btn-primary:hover {
+    background-color: #05668D;
+    border-color: #05668D;
+}
+
+/* Efecto de hover y animación en las tarjetas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none; /* Eliminar borde por defecto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoom y sombreado al hacer hover */
+.card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Estilo y tamaño de las imágenes dentro de las tarjetas */
+.card-img-top {
+    height: 250px; /* Altura fija para mantener las imágenes consistentes */
+    object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+/* Estilo del título de la tarjeta */
+.card-title {
+    font-size: 1.4em;
+    color: #05668D;
+    font-weight: bold;
+}
+
+/* Ajuste de los márgenes de las tarjetas en dispositivos pequeños */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Header */
+.header {
+    background: linear-gradient(45deg, #05668D, #02C39A); /* Fondo con gradiente */
+    color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease-in-out; /* Transición suave en el fondo */
+}
+
+.header h1 {
+    font-size: 3rem; /* Tamaño más grande para mayor impacto */
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.header p {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    background-color: #08393d; /* Fondo negro clásico */
+    color: #ffffff;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer .social-links a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    color: #F0F3BD; /* Cambia el color al pasar el mouse */
+}
+
+/* Animación personalizada para el fondo */
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animate.css para animaciones globales */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Botones de opción estilo Quizizz */
+.opcion {
+    background-color: #f1f1f1; /* Fondo inicial de los botones */
+    border: none;
+    border-radius: 12px; /* Bordes redondeados */
+    color: #333; /* Color del texto */
+    padding: 20px;
+    font-size: 1.2rem;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.opcion:hover {
+    background-color: #f0f0f5; /* Cambio de fondo al hacer hover */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+.opcion.correcta {
+    background-color: #28a745 !important; /* Verde para la opción correcta */
+    color: #fff !important; /* Texto blanco */
+}
+
+.opcion.incorrecta {
+    background-color: #dc3545 !important; /* Rojo para la opción incorrecta */
+    color: #fff !important; /* Texto blanco */
+}
+
+/* Animación de aparición de las preguntas */
+.pregunta-animada {
+    animation: aparecer 0.6s ease-out;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para el mensaje de resultados */
+#resultado-mensaje {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #05668D; /* Color de texto principal */
+}
+
+#resultado-detalle {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: #333; /* Color para el detalle del resultado */
+}
+
+.container h1 {
+    color: #02C39A; /* Color verde para resaltar el título */
+}
+
+/* Botón de volver al menú */
+.btn-primary {
+    background-color: #028090;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #05668D; /* Cambio de color al hacer hover */
+    color: #fff;
+}
+
+/* Agregar animación a los resultados */
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#resultado-mensaje, #resultado-detalle {
+    animation: aparecer 0.6s ease-out;
+}
+/* Ajustes generales para las tarjetas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de zoom al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+
+.card-img-top {
+    height: 250px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Mantener las proporciones de la imagen */
+    border-radius: 8px 8px 0 0; /* Bordes superiores redondeados */
+}
+
+.card-title {
+    font-size: 1.4rem;
+    color: #05668D;
+    font-weight: bold;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px; /* Espacio entre las tarjetas en pantallas pequeñas */
+    }
+}
